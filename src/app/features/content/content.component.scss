@@ -1,0 +1,126 @@
+:host::ng-deep {
+  .p-breadcrumb {
+    border: none;
+    padding: 12px;
+  }
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  width: 85%;
+}
+
+.content-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+}
+
+.content-header__item {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.content-form-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-form {
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  margin-left: 2%;
+  margin-right: 1%;
+  border-radius: 12px;
+  padding-top: 24px;
+}
+
+.container-wrap {
+  background-color: whitesmoke;
+  padding-top: 32px;
+  height: 100%;
+}
+
+.content-container {
+  background-color: white;
+  border-radius: 6px;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-wrap {
+  width: 96%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td {
+  padding: 18px;
+  text-align: left;
+}
+
+#customers tr:hover {
+  background-color: #dddddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(138, 203, 204);
+  color: black;
+  padding: 18px;
+  min-width: 180px;
+}
+
+.button-reload {
+  position: absolute;
+  right: 8%;
+}
+
+.add-input {
+  display: flex;
+  flex-flow: column;
+  width: 46%;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  padding: 12px 40px;
+}
+
+.add-btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 0;
+}
+
+.btn-cancel {
+  margin-right: 4%;
+}

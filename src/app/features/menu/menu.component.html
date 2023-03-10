@@ -1,0 +1,41 @@
+<div class="menu-wrap">
+  <div class="menu-container">
+    <div class="menu-img">
+      <img
+        src="https://baohiembenhvien.com/upload/hinhanh/thumb/bao-hiem-mb-ageas303t.jpg"
+        width="60%"
+        height="70%"
+      />
+      <i class="pi pi-lock"></i>
+    </div>
+    &nbsp; &nbsp;
+    <div class="menu-item-wrap">
+      <div class="menu-item-container">
+        <div class="menu-title">
+          <span>Tạo yêu cầu</span>
+          <div>
+            <mat-icon>expand_more</mat-icon>
+            <mat-icon>post_add</mat-icon>
+          </div>
+        </div>
+        &nbsp;
+        <div class="menu-title">
+          <span>Tạo yêu cầu</span>
+          <mat-icon>edit_document</mat-icon>
+        </div>
+      </div>
+      <div class="menu-list-container">
+        <p-tree [value]="nodes">
+          <ng-template let-node pTemplate="url">
+            <div>
+              <a class="menu-list" [href]="node.data">
+                {{ node.label }}
+                <mat-icon>login</mat-icon>
+              </a>
+            </div>
+          </ng-template>
+        </p-tree>
+      </div>
+    </div>
+  </div>
+</div>

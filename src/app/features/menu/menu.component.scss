@@ -1,0 +1,97 @@
+:host ::ng-deep {
+  .p-tree {
+    border: none;
+    padding: 0;
+  }
+
+  .p-tree-toggler {
+    position: absolute;
+    right: 0;
+  }
+
+  .p-tree .p-tree-container .p-treenode .p-treenode-content {
+    padding-left: 10px;
+  }
+
+  .p-treenode-label {
+    font-size: 16.5px;
+    color: black;
+    width: 100%;
+  }
+
+  .pi-fw {
+    color: black;
+  }
+
+  .p-treenode .p-treenode-content {
+    padding: 3px;
+  }
+
+  .p-tree .p-tree-container .p-treenode .p-treenode-content {
+    padding: 4px 0;
+  }
+}
+
+.menu-wrap {
+  width: 15%;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  bottom: 0;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-container {
+  padding: 0;
+  background-color: white;
+}
+
+.menu-img {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  justify-content: space-around;
+}
+
+.menu-item-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu-item-container {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.menu-list-container {
+  margin-top: 8px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 4px 0;
+}
+
+.menu-list:hover {
+  color: #3b82f6;
+}
+
+.menu-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 123%;
+  margin: 0 -20px;
+  background-color: antiquewhite;
+  padding: 8px;
+}

@@ -1,0 +1,38 @@
+:host ::ng-deep {
+  .p-badge-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .p-badge {
+    background-color: red;
+  }
+}
+
+.top-bar-icon {
+  margin-right: 66px;
+}
+
+.notify-icon {
+  font-size: 22px;
+}
+
+.top-bar-wrap {
+  margin: 0;
+  display: flex;
+  place-content: flex-end;
+}
+
+.top-bar-container {
+  background-color: blue;
+  height : 70px;
+  width : 85%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.top-bar-content {
+  color: white;
+  align-items: center;
+  display: flex;
+  margin-right: 24px;
+}

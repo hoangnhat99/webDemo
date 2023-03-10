@@ -1,0 +1,217 @@
+<p-button (click)="showModalDialog()" icon="pi pi-plus"></p-button>
+<p-dialog
+  header="Thêm mới người dùng"
+  [(visible)]="displayModal"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+<div class="add-form-wrap" [formGroup]="addForm">
+    <div class="add-input">
+      <span>Tên đăng nhập</span>
+      <input
+        type="text"
+        pInputText
+        placeholder="---"
+        formControlName="account"
+
+      />
+      <small
+        *ngIf=
+        "
+          addForm.controls.account.invalid &&
+          (addForm.controls.account.touched || addForm.controls.account.dirty)
+        "
+        class="alert"
+      >
+        Tên đăng nhập trường là bắt buộc
+      </small>
+    </div>
+    <div class="add-input">
+      <span>Tên nhân viên</span>
+      <input
+        type="text"
+        pInputText
+        placeholder="---"
+        formControlName="name"
+      />
+      <small
+        *ngIf=
+        "
+          addForm.controls.name.invalid &&
+          (addForm.controls.name.touched || addForm.controls.name.dirty)
+        "
+        class="alert"
+      >
+        Tên nhân viên trường là bắt buộc
+      </small>
+    </div>
+    <div class="add-input">
+      <span>Chức vụ</span>
+      <input
+        type="text"
+        pInputText
+        placeholder="---"
+        formControlName="position"
+      />
+      <small
+        *ngIf=
+        "
+          addForm.controls.position.invalid &&
+          (addForm.controls.position.touched || addForm.controls.position.dirty)
+        "
+        class="alert"
+      >
+        Chức vụ trường là bắt buộc
+      </small>
+    </div>
+    <div class="add-input">
+      <span>Khối</span>
+      <input
+        type="text"
+        pInputText
+        placeholder="---"
+        formControlName="group" />
+      <small
+        *ngIf=
+        "
+          addForm.controls.group.invalid &&
+          (addForm.controls.group.touched || addForm.controls.group.dirty)
+        "
+        class="alert"
+      >
+        Khối là trường là bắt buộc
+      </small>
+    </div>
+    <div class="add-input">
+      <span>Email</span>
+      <input
+        type="email"
+        pInputText
+        placeholder="---"
+        formControlName="email"
+      />
+      <small
+        *ngIf=
+        "
+          addForm.controls.email.errors?.['required'] &&
+          (addForm.controls.email.touched || addForm.controls.email.dirty)
+        "
+        class="alert"
+      >
+        Email là trường bắt buộc
+      </small>
+      <small
+        *ngIf=
+        "
+          addForm.controls.email.touched &&
+          addForm.controls.email.errors?.['pattern']
+        "
+        class="alert"
+      >
+        Vui lòng nhập Email theo định dạng 'example@gmail.com'
+      </small>
+    </div>
+    <div class="add-input">
+      <span>Số điện thoại</span>
+      <input
+        type="tel"
+        pInputText
+        placeholder="---"
+        formControlName="phone"
+        (keypress)="onlyNumberKey($event)"
+      />
+      <small
+        *ngIf=
+        "
+          addForm.controls.phone.errors?.['required'] &&
+          (addForm.controls.phone.touched || addForm.controls.phone.dirty)
+        "
+        class="alert"
+      >
+        Số điện thoại là trường bắt buộc
+      </small>
+      <small
+        *ngIf=
+        "
+          addForm.controls.phone.touched &&
+          addForm.controls.phone.errors?.['pattern']
+        "
+        class="alert"
+      >
+        Số điện thoại không hợp lệ
+      </small>
+    </div>
+    <div class="add-input">
+      <span>Phòng ban</span>
+      <p-dropdown
+        [options]="departments"
+        [style]="{ width: '100%' }"
+        placeholder="---"
+        optionValue="code"
+        optionLabel="name"
+        formControlName="department"
+        appendTo="body"
+      >
+      </p-dropdown>
+      <small
+        *ngIf=
+        "
+          addForm.controls.department.invalid &&
+          (addForm.controls.department.touched || addForm.controls.department.dirty)
+        "
+        class="alert"
+      >
+        Phòng ban là trường bắt buộc
+      </small>
+    </div>
+    <div class="add-input add-input-fw">
+      <span>Trạng thái của nhân viên</span>
+      <p-dropdown
+        [options]="status"
+        [style]="{ width: '100%' }"
+        placeholder="---"
+        optionValue="code"
+        optionLabel="name"
+        formControlName="status"
+        appendTo="body"
+      >
+      </p-dropdown>
+      <small
+        *ngIf=
+        "
+          addForm.controls.status.invalid &&
+          (addForm.controls.status.touched || addForm.controls.status.dirty)
+        "
+        class="alert"
+      >
+        Trạng thái là trường bắt buộc
+      </small>
+    </div>
+    <div class="add-btn-container">
+      <div class="btn-cancel">
+        <button
+          (click)="closePopup()"
+          pButton
+          pRipple
+          type="button"
+          label="Cancel"
+          class="add-btn p-button-raised p-button-secondary"
+        ></button>
+      </div>
+      <div>
+        <button
+          (click)="addFormSubmit()"
+          pButton
+          pRipple
+          type="submit"
+          label="Save"
+          class="add-btn p-button-raised p-button-primary"
+          [disabled]="!addForm.valid"
+        ></button>
+      </div>
+    </div>
+  </div>
+</p-dialog>
+<p-toast></p-toast>
