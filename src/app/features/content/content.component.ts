@@ -54,7 +54,7 @@ export class ContentComponent implements OnInit {
     code: null,
   });
 
-  public onSubmit() {
+  public onSearch() {
     let params = this.submitForm.getRawValue();
     this.productService.getData(params).subscribe((data) => {
       this.products = data;

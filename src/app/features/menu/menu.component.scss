@@ -46,6 +46,11 @@
   align-items: center;
 }
 
+.menu-title:hover {
+  cursor: pointer;
+  color: #3b82f6;
+}
+
 .menu-container {
   padding: 0;
   background-color: white;
